@@ -254,7 +254,7 @@ There are some additional optional arguments:
 			}
 			catch (Exception ex)
 			{
-				if (mem != null)
+				if (mem != null && mem.CanRead)
 					Console.WriteLine("{0}+{1:X}" + txtPListError + "{2}", fn, mem.Position, ex.Message);
 				else
 					Console.WriteLine("{0}" + txtPListError + "{1}", fn, ex.Message);
